@@ -150,3 +150,8 @@ Listę dostępnych urządzeń wypisuje `python -m sounddevice`.
   - [ ] 8.1 kolejne pomieszczenia: czujniki, głowice, kamery
   - [ ] 8.2 kopie zapasowe: konfiguracja i dane
   - [ ] 8.3 monitoring: logi i powiadomienie o awarii
+
+## Licencja
+
+Kod jest na licencji [MIT](LICENSE). Licencja nie obejmuje zdjęć produktów ani logo w `docs/img` i na schemacie,
+ich źródła podano pod schematem.
