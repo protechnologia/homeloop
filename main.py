@@ -5,8 +5,11 @@ from config.settings  import settings
 
 
 def main():
-    mic = Mic( rate=RATE, device=settings.mic_device )
+    mic = Mic(rate=RATE, device=settings.mic_device)
+
+    # main loop: read the microphone until stopped with Ctrl+C
     while True:
+        # waiting for the wake word
         sound = Sound(mic.read(WAKE_BLOCK_SAMPLES))  # 80 ms of audio
         print("#" * int(sound.loudness / 100))       # loudness bar in the terminal
 
