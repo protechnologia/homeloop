@@ -1,4 +1,5 @@
 numpy
+openwakeword
 pydantic
 pydantic-settings
 sounddevice

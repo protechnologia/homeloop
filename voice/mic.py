@@ -7,8 +7,8 @@ from config.constants import CHANNELS, DTYPE
 class Mic:
     """Microphone: returns blocks of samples (mono, int16)."""
 
-    def __init__(self, rate: int, device: int | str | None = None):
-        # device: index, name + audio API (e.g. "Realtek MME"), or None for the system default
+    def __init__(self, rate: int, device: str | None = None):
+        # device: name + audio API (e.g. "Realtek MME"), or None for the system default
         self._stream = sd.InputStream(samplerate=rate, channels=CHANNELS, dtype=DTYPE, device=device)
         self._stream.start()
 

@@ -17,8 +17,9 @@ class Settings(BaseSettings):
         env_ignore_empty = True,       # MIC_DEVICE= in .env means "use default"
     )
 
-    # device index (int) or name + audio API (str), e.g. "Realtek MME"; None = system default
-    mic_device: Annotated[int | str | None, Field(union_mode="left_to_right")] = None
+    mic_device:     str | None                          = None
+    wake_threshold: Annotated[float, Field(ge=0, le=1)] = 0.5
+    wake_word:      str                                 = "hey_jarvis"
 
 
 settings = Settings()

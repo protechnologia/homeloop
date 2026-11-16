@@ -82,6 +82,12 @@ py -3.10 -m venv .venv            # tworzymy venv
 pip install -r requirements.txt   # instalujemy zależności
 ```
 
+Modele openWakeWord nie są częścią paczki z pip, pobiera się je osobno (trafiają do `.venv`):
+
+```powershell
+python -c "from openwakeword.utils import download_models; download_models(['hey_jarvis'])"
+```
+
 ## Uruchomienie
 
 ```powershell
@@ -94,7 +100,9 @@ python main.py                    # zatrzymanie: Ctrl+C
 Opcjonalny plik `.env` w głównym folderze projektu:
 
 ```
-MIC_DEVICE=Realtek MME   # numer lub nazwa + sterownik; puste = domyślny
+MIC_DEVICE=Realtek MME   # nazwa + sterownik; puste = domyślny
+WAKE_WORD=hey_jarvis     # model openWakeWord
+WAKE_THRESHOLD=0.5       # próg wykrycia słowa wybudzającego, 0..1
 ```
 
 Listę dostępnych urządzeń wypisuje `python -m sounddevice`.
@@ -103,7 +111,7 @@ Listę dostępnych urządzeń wypisuje `python -m sounddevice`.
 
 - [ ] 1. Rozmowa głosowa
   - [x] 1.1 mikrofon: odczyt dźwięku blokami z wybranego urządzenia
-  - [ ] 1.2 słowo wybudzające: wykrywanie przez openWakeWord
+  - [x] 1.2 słowo wybudzające: wykrywanie przez openWakeWord
   - [ ] 1.3 własne słowo wybudzające: dotrenowanie modelu
   - [ ] 1.4 VAD: wykrycie końca wypowiedzi
   - [ ] 1.5 STT: zamiana nagrania na tekst (ElevenLabs Scribe)

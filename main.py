@@ -1,17 +1,18 @@
-from voice.mic        import Mic
-from voice.sound      import Sound
-from config.constants import RATE, WAKE_BLOCK_SAMPLES
-from config.settings  import settings
+from voice.mic          import Mic
+from voice.wake         import WakeWord
+from config.constants   import RATE, WAKE_BLOCK_SAMPLES
+from config.settings    import settings
 
 
 def main():
-    mic = Mic(rate=RATE, device=settings.mic_device)
+    wake  = WakeWord(name=settings.wake_word, threshold=settings.wake_threshold)
+    mic   = Mic( rate=RATE, device=settings.mic_device )
 
     # main loop: read the microphone until stopped with Ctrl+C
     while True:
-        # waiting for the wake word
-        sound = Sound(mic.read(WAKE_BLOCK_SAMPLES))  # 80 ms of audio
-        print("#" * int(sound.loudness / 100))       # loudness bar in the terminal
+        samples = mic.read(WAKE_BLOCK_SAMPLES)
+        if wake.detected(samples):
+            print(">>> wake word detected")
 
 
 if __name__ == "__main__":
