@@ -1,7 +1,7 @@
-from voice.mic          import Mic
-from voice.wake         import WakeWord
-from config.constants   import RATE, WAKE_BLOCK_SAMPLES
-from config.settings    import settings
+from homeloop.voice.mic          import Mic
+from homeloop.voice.wake         import WakeWord
+from homeloop.config.constants   import RATE, WAKE_BLOCK_SAMPLES
+from homeloop.config.settings    import settings
 
 
 def main():

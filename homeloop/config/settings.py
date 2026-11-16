@@ -5,7 +5,7 @@ from pydantic          import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # .env in the project root – found regardless of the current working directory
-ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 
 class Settings(BaseSettings):

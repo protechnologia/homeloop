@@ -1,7 +1,7 @@
-"""Generates docs/diagram.png – hardware overview with product photos.
+"""Generates docs/readme/diagram.png – hardware overview with product photos.
 
 Usage (from the project root, needs Pillow: pip install pillow):
-    python docs/diagram.py
+    python docs/readme/diagram.py
 """
 from pathlib import Path
 

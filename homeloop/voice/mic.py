@@ -1,7 +1,7 @@
 import numpy as np
 import sounddevice as sd
 
-from config.constants import CHANNELS, DTYPE
+from homeloop.config.constants import CHANNELS, DTYPE
 
 
 class Mic:

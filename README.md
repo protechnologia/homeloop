@@ -2,13 +2,13 @@
 
 Domowy asystent głosowy na Raspberry Pi – projekt w trakcie budowy.
 
-![Schemat sprzętu](docs/diagram.png)
+![Schemat sprzętu](docs/readme/diagram.png)
 
 <sub>Zdjęcia: sklepy z sekcji [Sprzęt](#sprzęt). Logo z Wikimedia Commons:
 [Claude](https://commons.wikimedia.org/wiki/File:Claude_AI_symbol.svg) (CC0),
 [ElevenLabs](https://commons.wikimedia.org/wiki/File:ElevenLabs_Logo_01.svg) (CC BY-SA 4.0, zmienione),
 [Home Assistant](https://commons.wikimedia.org/wiki/File:New_Home_Assistant_logo.svg) (CC BY-SA 4.0).
-Znaki towarowe należą do właścicieli. Kod schematu: `docs/diagram.py`.</sub>
+Znaki towarowe należą do właścicieli. Kod schematu: `docs/readme/diagram.py`.</sub>
 
 ## Pomysł
 
@@ -161,5 +161,5 @@ Listę dostępnych urządzeń wypisuje `python -m sounddevice`.
 
 ## Licencja
 
-Kod jest na licencji [MIT](LICENSE). Licencja nie obejmuje zdjęć produktów ani logo w `docs/img` i na schemacie,
+Kod jest na licencji [MIT](LICENSE). Licencja nie obejmuje zdjęć produktów ani logo w `docs/readme/img` i na schemacie,
 ich źródła podano pod schematem.
